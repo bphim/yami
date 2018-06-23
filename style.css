@@ -1,0 +1,541 @@
+/*
+Theme Name: YamiSora 2016
+Theme URI: http://www.yami-sora.org/
+Description: Child theme for the Twenty Eleven theme
+Author: thonglinh90
+Template: yamisora
+Version: 0.1
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #ececec url("http://www.yami-sora.org/wp-content/uploads/2016/06/ys-bg.gif") no-repeat center 50px fixed;
+}
+
+#ys-header {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+}
+#ys-main {
+    margin-bottom: 20px;
+}
+
+#wpadminbar {
+    top: auto !important;
+    bottom: 0 !important;
+    z-index: 9999999;
+    position: fixed !important;
+}
+
+#ys-footer {
+
+}
+
+#ys-body {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.f-news_home-post {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: 15px;
+}
+
+.f-n_h-post-img {
+    width: 38%;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+.f-n_h-post-img img {
+    width: 100%;
+    height: auto;
+}
+
+.f-n_h-post-content {
+    width: 62%;
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+.f-n_h-post-img:after {
+    content: " ";
+    height: 100%;
+    width: 10px;
+    background-color: white;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 999999;
+    right: 0;
+    top: 0;
+}
+.f-n_h-post-status {
+    background-color: #34ab00;
+    padding: 3px 7px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.f-n_h-post-time {
+    float: right;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.f-n_h-post-title a:hover {
+    color: #19c0e4;
+    text-decoration: none;
+}
+
+.f-news_home-title {
+
+}
+
+.f-n_h-post-title a {
+    text-transform:uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.p-status-others {
+    color: #e6b10e;
+    background-color: transparent;
+    border: 2px solid #e6b10e;
+    padding: 1px 5px;
+    text-transform: uppercase;
+}
+
+.p-status-completed {
+    color: white;
+    text-transform: uppercase;
+    background-color: #34ab00;
+}
+
+.p-status-newest {
+    background-color: #e30a47;
+    color: white;
+}
+
+.p-status-ongoing {
+    color: #e30a47;
+    background-color: transparent;
+    border: 2px solid #e30a47;
+    padding: 1px 5px;
+    text-transform: uppercase;
+}
+
+.n_p-style {
+    background-color: #0aa8e3;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.n_p-style a {
+    padding: 3px 10px;
+    display: inline-block;
+}
+
+.n_p-pre_link {
+    float: left;
+}
+
+.n_p-pre_link i {
+    margin-right: 7px;
+    font-size: 16px;
+}
+
+.n_p-nxt_link {
+    float: right;
+}
+
+#next_pre {
+    float: left;
+    width: 100%;
+}
+
+.n_p-style a {
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.f-n_h-post-title {
+    margin-bottom: 7px;
+}
+
+.n_p-nxt_link i {
+    margin-left: 7px;
+    font-size: 16px;
+}
+
+.ys-season-item {
+    width: 48%;
+    position: relative;
+    float: left;
+    margin: 1%;
+    overflow: hidden;
+}
+
+.ys-ss-img {
+    overflow: hidden;
+}
+
+.ys-ss-img img {
+    width: 100%;
+    height: auto;
+}
+
+.ys-ss-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding:  5px 10px;
+    margin: 5px;
+}
+
+.ys-ss-title a {
+    color: white;
+}
+
+aside {
+    margin-bottom: 30px;
+}
+
+.aside-title {
+    font-size: 22px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #bbb;
+    margin-bottom: 5px;    
+}
+
+.ys-func-title {
+    font-size: 22px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0 15px 0;
+    color: #bbb;
+}
+
+.ys-search-form {
+    display: flex;
+}
+
+.ys-search-form input[type="text"]  {
+    background-color: white;
+    border: 0px solid #c0c0c0;
+    border-bottom: 1px solid #dbdbdb;
+    height: 40px;
+    float: left;
+    flex: 100 1 auto;
+    padding: 0 10px;
+}
+
+.ys-search-form button[type="submit"]  {
+    background-color: #0cbe6c;
+    border: 1px solid #c0c0c0;
+    border-left: 0px;
+    float: left;
+    height: 40px;
+    color: white;
+    font-weight: bold;
+    padding: 0 30px;
+    font-size: 16px;
+}
+#ys-navbar {
+    background-color: white;
+    z-index: 9999999;
+}
+
+.f-post {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.f-post-body {
+    padding: 10px 20px;
+}
+
+.f-post-title {
+    padding: 15px 20px;
+    border-bottom: 1px solid #dbdbdb;
+    margin: 0;
+    display: block;
+    color: black;
+    font-size: 24px;
+}
+
+.f-post-info {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.f-p-info-item {
+    opacity: 0.5;
+    margin-right: 15px;
+    padding: 0px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.ys-func {
+    margin-bottom: 15px;
+}
+
+.f-p-info-item i {
+    margin-right: 5px;
+}
+
+.post-categories {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.post-categories:before {
+    content: 'Chuyên mục';
+    float: left;
+    padding: 5px 10px;
+    background-color: #0cbe6c;
+    color: white;
+    margin-right: 5px;
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.post-categories li {
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px 10px;
+    background-color: black;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.post-categories li a {    
+    color: white;    
+}
+
+.comment-list {    
+
+}
+
+.comment-body { 
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.comment-content {
+    background-color: white;
+    flex: 100 1 auto;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+}
+
+.comment-author {
+    margin-right: 15px;
+}
+
+.fn, .fn a {
+    font-weight: bold;
+    margin-bottom: 7px;
+    display: block;
+}
+
+.comment-additional-links a {
+    margin-right: 10px;
+}
+
+.comment-time {
+    color: #aaa;
+}
+
+.comment-author img {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.comment-respond {
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px 20px;
+}
+
+[class^="comment-form-"] label {
+    display: block;
+}
+
+[class^="comment-form-"] input, [class^="comment-form-"] textarea {
+    width: 100%;
+}
+
+.comment-reply-title, .comments-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+}
+
+.form-submit {
+    float: right;
+}
+
+.ys-banner {
+     height: auto;
+     overflow: hidden;     
+     margin-top: 90px;
+}
+
+.ys-banner img {
+     border-bottom: 1px solid #efefef;
+     width: 100%;
+}
+
+.depth-2 {
+     margin-left: 80px;
+}
+
+img.aligncenter {
+    display: block;
+    margin: 0 auto;
+}
+
+.f-n_h-post-info {
+    margin-top: 7px;
+}
+
+.f-n_h-post-sume {
+   
+}
+
+.screen-reader-text {
+     display: none;
+}
+
+.page-numbers {
+    background-color: #0aa8e3;
+    padding: 5px 10px;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    display: inline-block;
+}
+
+.nav-links .current {
+    background-color: white;
+    color: #0aa8e3;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0px;
+  border-radius: 0px;
+  padding: 5px;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    background: white url("http://www.yami-sora.org/wp-content/uploads/2016/04/arrow.png") no-repeat;
+    background-position: right 10px center;
+}
+
+select:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 2px #0cbe6c;
+}
+
+.dsq-widget-item { 
+   overflow: hidden; 
+   padding: 10px; 
+   border-bottom: 1px solid #dbdbdb;
+   background-color: white;
+   margin-bottom: 10px; 
+   font-weight: bold;
+}
+
+img.dsq-widget-avatar {
+    margin: 0 7px 0 0 !important;
+    padding: 0 !important;
+    width: 60px !important;
+    height: 60px !important;
+    border: 1px solid #dbdbdb !important;
+    border-radius: 50px !important;
+} 
+
+.dsq-widget-comment p {
+    display: block !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.dsq-widget-comment p br {
+    display: none;
+}
+
+.dsq-widget-meta a {
+    color: #aaa;
+}
+
+p.dsq-widget-meta {
+    clear: none !important;
+}
+
+li.dsq-widget-item {
+    margin-top: 0 !important;
+}
+
+.f-post-comment {
+    background-color: white;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    padding: 20px;
+}
+
+.f-post-body img {
+    max-width: 100%;
+}
+
+.f-post-status {
+    display: inline-block;
+    font-weight: bold;
+    padding: 3px 7px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+.aside-body {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1px solid #dbdbdb;
+}
